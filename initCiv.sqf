@@ -58,18 +58,6 @@ civilianGoggles = [
 	"G_Squares"
 ];
 
-weaponRow = [
-	["arifle_AKM_F","30Rnd_762x39_Mag_F"],
-	["arifle_AKM_F","30Rnd_762x39_Mag_F"],
-	["arifle_AKM_F","30Rnd_762x39_Mag_F"],
-	["arifle_AKM_F","30Rnd_762x39_Mag_F"],
-	["arifle_AKM_F","30Rnd_762x39_Mag_F"],
-	["arifle_AKM_F","30Rnd_762x39_Mag_F"],
-	["rhs_weap_m4","rhs_mag_30Rnd_556x45_M855_Stanag"],
-	["rhs_weap_m4","rhs_mag_30Rnd_556x45_M855_Stanag"],
-	["rhs_weap_m4","rhs_mag_30Rnd_556x45_M855_Stanag"]
-];
-
 niggaFaces = [
 	"TanoanHead_A3_04",
 	"TanoanHead_A3_03",
@@ -78,16 +66,6 @@ niggaFaces = [
 	"AfricanHead_02",
 	"AfricanHead_03",
 	"AfricanHead_01"
-];
-
-niggaVests = [
-	"",
-	"",
-	"",
-	"",
-	"",
-	"",
-	""
 ];
 
 niggaVoices = [
@@ -101,11 +79,4 @@ _unit addHeadgear (selectRandom civilianHats);
 _unit addGoggles (selectRandom civilianGoggles);
 _unit setFace (selectRandom niggaFaces);
 removeVest _unit;
-_unit addVest (selectRandom niggaVests);
-
-weapArray = selectRandom weaponRow;
-
-_unit addMagazineGlobal (weapArray select 1);
-_unit addMagazineGlobal (weapArray select 1);
-_unit addWeaponGlobal (weapArray select 0);
-_unit setSpeaker (selectRandom niggaVoices);
+_unit setSpeaker (selectRandom niggaVoices)
